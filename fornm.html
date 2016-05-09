@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('p').bind('click',function(){
+                $('#text').after('<p>aauch</p>');
+            });
+
+            $("#submit").click(function(){
+                var name = $("#dirname").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "php/interface.php",
+                    data: {'name':name},
+                    cache: false,
+                    success: function(returnV){
+                    $('#text').text(returnV);
+                }
+            });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="form">
+    <input type="text" id="dirname" name="dirname">
+    <button type="submit" id="submit">submit</button>
+
+</div>
+<p id="live">see</p>
+<div id="text"> </div>
+
+</body>
+</html>

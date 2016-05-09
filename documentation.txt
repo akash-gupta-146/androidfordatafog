@@ -1,0 +1,18 @@
+index.php:
+    1) PHP tag:
+        a) connect localhost and link database. (include functions.php)
+        b) Checks for login if(error){redirects to login.php}
+    2) HTML5 frontend interface.
+    3) jQuery:
+       a) Login Check using AJAX
+       b) If wrong password, redirects to registration form.
+
+login.php:
+    1) PHP tag:
+        a)entering dir working
+        b) back button not working.x x x x x x x x x x x x x x x x
+        c) removeing folders from tables. [BUG: cannot ]
+        d) popup modal for uploadinf file.
+
+
+
